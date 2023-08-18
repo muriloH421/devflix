@@ -9,7 +9,7 @@ import { useCallback } from "react";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
-const [movies,setMovies]= useState([])
+  const [movies, setMovies] = useState([]);
   const apikey = "e4d577fa";
   const apiUrl = `https://omdbapi.com/?apikey=${apikey}`;
 
@@ -34,8 +34,8 @@ const [movies,setMovies]= useState([])
 
   return (
     <div id="app">
-      <div className="logo">
-        <img src={logo} alt="logo devflix"></img>
+      <div className="app">
+        <img src={logo} alt="logo devflix"></img>F
       </div>
       <div className="search">
         <input
@@ -53,7 +53,7 @@ const [movies,setMovies]= useState([])
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
-            <MovieCard  movies={movie} />
+            <MovieCard key ={movies.imdbID}  movies={movie}/>
           ))}
         </div>
       ) : (
