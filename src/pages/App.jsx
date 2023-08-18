@@ -34,8 +34,8 @@ const [movies,setMovies]= useState([])
 
   return (
     <div id="app">
-      <div className="app">
-        <img src={logo} alt="logo devflix"></img>F
+      <div className="logo">
+        <img src={logo} alt="logo devflix"></img>
       </div>
       <div className="search">
         <input
