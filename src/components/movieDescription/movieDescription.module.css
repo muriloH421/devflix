@@ -91,6 +91,27 @@
   text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+  .movieModal {
+    width: 320px;
+    margin-top: 2em;
+  }
+
+  .desc {
+    padding-bottom: 3.5em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .movieModal {
+    width: 320px;
+    margin-top: 2em;
+  }
+
+  .desc {
+    padding-bottom: 3.5em;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
