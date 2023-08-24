@@ -5,13 +5,12 @@ import { useState } from "react";
 
 import "./App.css";
 import MovieCard from "../components/movieCard/movieCard";
-import { useCallback } from "react";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
-  const apikey = "e4d577fa";
-  const apiUrl = `https://omdbapi.com/?apikey=${apikey}`;
+  const apiKey = "e4d577fa";
+  const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
   useEffect(() => {
     searchMovies("Batman");
@@ -20,6 +19,7 @@ const App = () => {
   const searchMovies = async (title) => {
     const response = await fetch(`${apiUrl}&s=${title}`);
     const data = await response.json();
+
     console.log(data);
     setMovies(data.Search);
   };
@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div id="app">
       <div className="app">
-        <img src={logo} alt="logo devflix"></img>F
+        <img src={logo} alt="logo devflix"></img>
       </div>
       <div className="search">
         <input
@@ -53,7 +53,7 @@ const App = () => {
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
-            <MovieCard key ={movies.imdbID}  movies={movie}/>
+            <MovieCard key ={movie.imdbID}  movies={movie}/>
           ))}
         </div>
       ) : (

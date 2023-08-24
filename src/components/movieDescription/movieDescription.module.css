@@ -66,3 +66,23 @@
   height: 5%;
   border-radius: 0;
 }
+.movieType a {
+  margin-top: 1em;
+  padding: 0, 2em 0, 7em;
+  background: #fff;
+  border-radius: 0.4em;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.containerMisc{
+font-size: 14pt;
+display: flex;
+padding: 3em 2em 2em;
+}
+.containerFlex{
+flex: 1;
+}
+.desc{
+padding: 0 2em 2em;
+text-align: justify;
+}
